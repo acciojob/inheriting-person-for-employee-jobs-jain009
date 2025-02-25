@@ -1,4 +1,4 @@
-// Person class
+// person.js
 class Person {
     constructor(name, age) {
         this.name = name;
@@ -10,10 +10,9 @@ class Person {
     }
 }
 
-// Employee class inheriting from Person
 class Employee extends Person {
     constructor(name, age, jobTitle) {
-        super(name, age); // Call parent constructor
+        super(name, age);
         this.jobTitle = jobTitle;
     }
 
@@ -22,10 +21,6 @@ class Employee extends Person {
     }
 }
 
-// Example usage:
-// const person = new Person("Alice", 25);
-// person.greet();
-
-// const employee = new Employee("Bob", 30, "Manager");
-// employee.greet();      // Inherited method from Person
-// employee.jobGreet();   // Employee-specific method
+// Export classes if using modules
+window.Person = Person;    // Make available globally
+window.Employee = Employee;
